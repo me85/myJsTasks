@@ -5,4 +5,5 @@ function roundIt(radius) {
 
 var areaDec = roundIt(6).toFixed(2);
 
+console.log(roundIt(6));
 console.log(areaDec);
