@@ -13,6 +13,8 @@ function sevenBoom(n) {
 
     if (arr.includes(7) && index % 7 == 0) {
       console.log("BOOM BOOM");
+    } else if (arr.includes(0) && index % 7 == 0) {
+      console.log("BOOM BOOM");
     } else if (index % 7 == 0) {
       console.log("BOOM");
     } else {
