@@ -23,4 +23,4 @@ function sevenBoom(n) {
   }
 }
 
-sevenBoom(110);
+sevenBoom(100);

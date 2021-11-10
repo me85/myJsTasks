@@ -22,13 +22,13 @@ var mikescore = ArrayAvg(myArray2);
 var marryescore = ArrayAvg(myArray3);
 
 if (jhonescore > mikescore && jhonescore > marryescore) {
-  console.log(`johne win score is: ${jhonescore}`);
+  return console.log(`johne win score is: ${jhonescore}`);
 } else if (jhonescore == mikescore && jhonescore == marryescore) {
-  console.log(` win score is: ${jhonescore}  3 with same score -there is no winner`);
+  return console.log(` win score is: ${jhonescore}  3 with same score -there is no winner`);
 } else if (mikescore > jhonescore && mikescore > marryescore) {
-  console.log(`mike win score is: ${mikescore}`);
+  return console.log(`mike win score is: ${mikescore}`);
 } else if (marryescore > jhonescore && marryescore > mikescore) {
-  console.log(`merriy win score is: ${marryescore}`);
+  return console.log(`merriy win score is: ${marryescore}`);
 } else {
-  console.log(" two with the same score - so there is no winner");
+  return console.log(" two with the same score - so there is no winner");
 }

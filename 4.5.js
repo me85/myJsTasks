@@ -4,12 +4,12 @@
 
 function leapYear(year) {
   if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
-    console.log("This is  a leap year.");
+    return console.log("This is  a leap year.");
   } else if (year % 4 == 0 && year % 100 == 0) {
-    console.log("It is not leap year");
+    return console.log("It is not leap year");
   } else if (year % 4 == 0) {
-    console.log("It is indeed leap year");
+    return console.log("It is indeed leap year");
   }
 }
 
-leapYear(2400);
+leapYear(4);
