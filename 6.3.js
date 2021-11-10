@@ -1,16 +1,13 @@
 let arr = ["boo", "doooo", "hoo", "ro"];
 
 function arrWordLength(array) {
+  let array1 = [];
   for (let index = 0; index < array.length; index++) {
     let element = array[index];
     let x = element.length;
-    console.log(x);
-    array = array.push(x);
+    array1.push(x);
   }
-  let newArray = array.slice(5, 9);
-  return newArray;
+  return array1;
 }
 
 console.log(arrWordLength(arr));
-
-// not working
