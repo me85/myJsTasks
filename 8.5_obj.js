@@ -10,3 +10,4 @@ function swapped(obj) {
 }
 
 swapped(obj);
+// console.log(obj);
