@@ -16,16 +16,15 @@ isString("dan", callback);
 // is it correct?
 
 function callback(capitalSentence) {
-  console.log(capitalSentence.replace(/\s+/g, "-"));
+  return capitalSentence.replace(/\s+/g, "-");
 }
 
 function firstWordUpperCase(mySentence, callback) {
   let capitalSentence = mySentence.replace(/(^\w{1})/, (letter) => letter.toUpperCase());
 
-  callback(capitalSentence);
+  return callback(capitalSentence);
 }
-
-firstWordUpperCase("meital drukman", callback);
+console.log(firstWordUpperCase("meital drukman", callback));
 
 // 3
 
