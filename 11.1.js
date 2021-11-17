@@ -37,15 +37,15 @@ const newReleases = [
 // method. Return from the function an array of objects. Each object
 // will contain the id and name of the specific movie.
 
-// newReleases.forEach(function (movie) {
-//   let arrShortRelease = [];
-//   movie = {
-//     id: movie.id,
-//     title: movie.title,
-//   };
-//   arrShortRelease.push(movie);
-//   console.log(arrShortRelease);
-// });
+newReleases.forEach(function (movie) {
+  let arrShortRelease = [];
+  movie = {
+    id: movie.id,
+    title: movie.title,
+  };
+  arrShortRelease.push(movie);
+  console.log(arrShortRelease);
+});
 
 // 2. Create another function that will do the same thing expect now
 // use the map method.
