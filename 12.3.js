@@ -83,13 +83,19 @@ const school = {
 // subject doesn’t exist in their array of subjects
 
 function assignTeachersSubject(id, newSubject) {
-  const teacher = school.teachers.find((t) => t.id === id);
-
-  const newSubject1 = school.teachers.subjects.find((s) => s.includes(newSubject));
-
-  if (newSubject1 === undefined) {
-    teacher.subjects.push(newSubject);
+  for (let index = 0; index < school.teachers.length; index++) {
+    if (school.teachers.id === id) {
+      let teacher = school.teachers[index];
+      console.log(teacher);
+    }
+    if (school.teachers.subjects?? === undefined) {
+      teacher.subjects.push(newSubject);
+    } else {
+      console.log(" there is such subject allready");
+    }
   }
+
+  console.log(school.teachers);
 }
 
 assignTeachersSubject(1, "google");
