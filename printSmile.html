@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smile</title>
+
+    <style>
+      #div {
+        height: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>how many smiles do you want see?</h1>
+    <input type="text" name="smile" id="smile" />
+    <input type="button" value="Click me" />
+    <div id="myDiv"></div>
+
+    <script>
+      let button = document.querySelector('input[type="button"]');
+
+      button.addEventListener("click", (event) => {
+        let numOfSmiles = document.querySelector('input[type="text"]').value;
+        document.getElementById("myDiv").innerHTML = "&#x263A;".repeat(numOfSmiles);
+      });
+    </script>
+  </body>
+</html>

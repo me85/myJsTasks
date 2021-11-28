@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" / >
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    //your js code here
+
+    console.log(document.querySelectorAll("input"));
+    console.log(document.querySelectorAll("div"));
+    console.log(document.querySelector("img"));
+    console.log(document.querySelector("a"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelector("p"));
+
+    console.log(document.querySelectorAll("input"));
+    console.log(document.querySelectorAll("div"));
+    console.log(document.querySelector("img"));
+    console.log(document.querySelector("a"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelector("p"));
+
+    let pEl = document.getElementsByTagName("p");
+    console.log(pEl);
+
+    let h1El = document.getElementsByTagName("h1");
+    console.log(h1El);
+
+    let aEl = document.getElementsByTagName("a");
+    console.log(aEl);
+
+    let imgEl = document.getElementsByTagName("img");
+    console.log(imgEl);
+
+    let firstDivEl = document.getElementsByClassName("x");
+    console.log(firstDivEl);
+
+    let secDivEl = document.getElementById("y");
+    console.log(secDivEl);
+
+    let input1El = document.getElementsByTagName("input")[0];
+    console.log(input1El);
+
+    let input2El = document.getElementsByTagName("input")[1];
+    console.log(input2El);
+
+    let input3El = document.getElementsByTagName("input")[2];
+    console.log(input3El);
+
+    let input = document.getElementsByTagName("input");
+    console.log(input);
+
+    // 3
+    var x = document.getElementsByTagName("input");
+
+    var inputx = Array.prototype.slice.call(x);
+    // for each by tag name
+    inputx.forEach((input) => {
+      console.log("hi", input);
+    });
+
+    // for each  iterating over a NodeList, as you get back from running a document.querySelectorAll.
+
+    [...x].forEach((x) => {
+      console.log("spread forEach worked with query selector");
+    });
+  </script>
+</html>
