@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #btn {
+        text-align: center;
+      }
+
+      #inputAge {
+        text-align: center;
+      }
+
+      #showText {
+        background-color: rgb(245, 243, 240);
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="age" id="inputAge" />
+
+    <button id="btn">click me</button>
+    <br /><br /><br />
+    <div id="showText"></div>
+
+    <script>
+      let input = document.querySelector("#inputAge");
+      let btn = document.querySelector("#btn");
+      let textOnDiv = document.querySelector("#showText");
+
+      btn.addEventListener("click", function () {
+        if (input.value > 18) {
+          textOnDiv.innerHTML = "you can drink";
+        } else {
+          textOnDiv.innerHTML = "you cannt drink";
+        }
+      });
+    </script>
+  </body>
+</html>

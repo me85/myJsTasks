@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Why are you interstead in this job??</h1>
+
+    <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+
+    <button id="jobBtn">click here</button>
+    <p id="myP"></p>
+
+    <script>
+      let btn = document.querySelector("#jobBtn");
+      let jobTextarea = document.querySelector("#w3review");
+      let pText = document.querySelector("#myP");
+
+      btn.addEventListener("click", function () {
+        let content = jobTextarea.value;
+        var contentleangth = content.length;
+        // console.log(contentleangth);
+
+        if (contentleangth < 40) {
+          pText.innerHTML = "you need to add more then 40 chr";
+        } else {
+          pText.innerHTML = "great ready to send!";
+        }
+      });
+    </script>
+  </body>
+</html>
