@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      Age:
+      <input type="text" name="age" id="myAge" />
+      <br /><br />
+      Name:
+      <input type="text" name="name" id="myName" />
+      <br /><br />
+      Email:
+      <input type="text" name="email" id="myEmail" />
+      <br /><br />
+      <input type="submit" />
+    </form>
+
+    <script>
+      const myForm = document.querySelector("#myForm");
+      const myAge = document.querySelector("#myAge");
+      const myName = document.querySelector("#myName");
+      const myEmail = document.querySelector("#myEmail");
+
+      myForm.addEventListener("submit", (e) => {
+        let txt;
+        e.preventDefault(); //stops the request from being sent (prevents page reload)
+        let r = confirm(`Press a button to confirm the content!
+        ${myAge.value} 
+        ${myName.value};
+        ${myEmail.value};
+        `);
+        if (r == true) {
+          txt = "congratulations you successfully sent this form";
+          alert(txt);
+        } else {
+          e.preventDefault(); //stops the request from being sent (prevents page reload)
+          txt = "You pressed Cancel!";
+          alert(txt);
+        }
+      });
+    </script>
+  </body>
+</html>

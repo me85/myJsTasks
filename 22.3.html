@@ -7,27 +7,39 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Why are you interstead in this job??</h1>
+    <h1>wellcome to guss my letter</h1>
 
-    <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+    <input type="text" id="myInput" placeholder="?" />
+    <h3>Try to Guess aletter</h3>
+    <div class="userPeedback"></div>
 
-    <button id="jobBtn">click here</button>
-    <p id="myP"></p>
+    <h2>Keys guessed</h2>
+    <div class="keysGussed"></div>
 
     <script>
-      let btn = document.querySelector("#jobBtn");
-      let jobTextarea = document.querySelector("#w3review");
-      let pText = document.querySelector("#myP");
+      let inputVal = document.querySelector("#myInput");
+      let divOfGuesses = document.querySelector(".keysGussed");
+      let userFeedback = document.querySelector(".userPeedback");
 
-      btn.addEventListener("click", function () {
-        let content = jobTextarea.value;
-        var contentleangth = content.length;
-        // console.log(contentleangth);
+      let arrayKeysGussed = [];
 
-        if (contentleangth < 40) {
-          pText.innerHTML = "you need to add more then 40 chr";
+      const alphabet = "abcdefghijklmnopqrstuvwxyz";
+      const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
+      console.log("secret", randomCharacter);
+
+      let secretLetter = inputVal.addEventListener("keypress", (e) => {
+        // taking user input
+        let userInput = inputVal.value;
+
+        console.log(userInput);
+        arrayKeysGussed.push(userInput);
+        let keys = arrayKeysGussed.join(" ");
+        divOfGuesses.innerHTML = keys;
+
+        if (randomCharacter === userInput) {
+          userFeedback.innerHTML = "Your'e guess is correct!!!";
         } else {
-          pText.innerHTML = "great ready to send!";
+          userFeedback.innerHTML = "please try againg :( ";
         }
       });
     </script>
